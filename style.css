@@ -35,8 +35,11 @@ span {
   display: inline-block;
   /* width: 150px; */
   height: 30px;
-  border: 3px dotted blue;
+  border: 3px  blue;
   background:red;
   color: white;
+  font-style:italic;
+  text-decoration:line-through;
+  text-transform:capitalize;
 }
 
