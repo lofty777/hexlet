@@ -32,7 +32,7 @@ h1 {
 }
 
 .container {
-  width: 1280px;
+  /* width: 1280px; */
   margin: 0 auto;
   padding: 50px 30px;
 }
@@ -47,4 +47,21 @@ h1 {
   color: #fd7014;
   font-weight: bold;
   font-variant: small-caps;
+}
+
+
+
+.column {
+  columns: 250px 2;
+  column-gap: 50px;
+  column-rule: 3px dotted red;
+}
+
+.column p {
+  margin-top: 0;
+}
+
+.column h2 {
+  text-align: center;
+  column-span: all;
 }
