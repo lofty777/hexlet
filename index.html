@@ -8,26 +8,34 @@
 </head>
 <body>
   <form>
-    <h2>Ваши любимые блюда</h2>
-    <div>
+    <fieldset>
+      <legend>Данные о пользователе</legend>
       <label>
-          <input type="checkbox" name="dishes" value="pizza">
-          Пицца
+        Имя
+        <input type="text" name="name">
       </label>
       <br>
   
       <label>
-        <input type="checkbox" name="dishes" value="burger">
-        Бургеры
+        Фамилия
+        <input type="text" name="surname">
+      </label>
+    </fieldset>
+    <fieldset>
+      <legend>Способ доставки</legend>
+      <label>
+        <input type="radio" name="delivery" value="courier">
+        Курьер
       </label>
       <br>
   
       <label>
-        <input type="checkbox" name="dishes" value="paste">
-        Паста
+        <input type="radio" name="delivery" value="pickup">
+        Самовывоз
       </label>
-    </div>
-    <button>Рассказать о любимых блюдах</button>
+    </fieldset>
+  
+    <button>Заказать</button>
   </form>
 </body>
 </html>
