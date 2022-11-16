@@ -8,34 +8,43 @@
 </head>
 <body>
   <form>
+    <h2>Регистрация на сайте</h2>
+
     <fieldset>
       <legend>Данные о пользователе</legend>
       <label>
         Имя
-        <input type="text" name="name">
+        <input type="text" name="name" placeholder="Введите ваше имя">
       </label>
       <br>
   
       <label>
         Фамилия
-        <input type="text" name="surname">
-      </label>
-    </fieldset>
-    <fieldset>
-      <legend>Способ доставки</legend>
-      <label>
-        <input type="radio" name="delivery" value="courier">
-        Курьер
+        <input type="text" name="surname" placeholder="Введите вашу фамилию">
       </label>
       <br>
-  
+
       <label>
-        <input type="radio" name="delivery" value="pickup">
-        Самовывоз
+        Дата рождения
+        <input type="number" name="birhday" placeholder="Введите дату рождения">
+      </label>
+      <br>
+
+      <label>
+        Логин
+        <input type="text" name="login"
+        placeholder="Введите логин">
+      </label>
+      <br>
+
+      <label>
+        Пароль
+        <input type="password" name="password" placeholder="Введите пароль">
       </label>
     </fieldset>
+    
   
-    <button>Заказать</button>
+    <button>Зарегистрироваться</button>
   </form>
 </body>
 </html>
