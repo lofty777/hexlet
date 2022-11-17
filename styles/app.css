@@ -1,29 +1,41 @@
 body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100vw;
-  height: 100vh;
-  margin: 0;
-
+  padding: 20px;
   font: 18px/1.5 sans-serif;
 }
 
-.chessboard {
-  width: 500px;
-  height: 500px;
-
-  background: #b58763;
-
-  border-collapse: collapse;
+.hexlet-ul {
+  list-style: none;
 }
 
-/* BEGIN (write your solution here) */
-.chessboard tr:nth-of-type(odd) td:nth-child(odd) {
-  background: #f1d9b5;
+.hexlet-ul li {
+  position: relative;
+
+  margin-bottom: 20px;
 }
 
-.chessboard tr:nth-of-type(even) td:nth-child(even) {
-  background: #f1d9b5;
+.hexlet-ul li::before {
+  position: absolute;
+  left: -30px;
+
+  width: 20px;
+  height: 20px;
+
+  background-image: url(https://assets.codepen.io/1425525/hexlet_logo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  content: '';
 }
-/* END */
+.hexlet-ul li::after {
+  position: absolute;
+  /* right: -30px; */
+
+  width: 20px;
+  height: 20px;
+
+  background-image: url(https://cherepah.ru/wp-content/uploads/c/5/8/c58603bdc6f9d1636eaf46ed22968ddd.jpe);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  content: '';
+}
