@@ -6,13 +6,13 @@ body {
 }
 
 .time {
-  color: #f44336; /* Red */ 
+  color: #f44336; /* Red */
 }
 
 .timer {
   color: #2196f3; /* Blue */
 }
 
-.time + .timer {
-  color: #4caf50; /* Green */
+.time ~ .timer {
+  color: #ff9800; /* Orange */
 }
