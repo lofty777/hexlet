@@ -1,32 +1,29 @@
 body {
-  font: 16px/1.5 monospace;
-}
-
-[class^="figure"] {
-  display: inline-flex;
-  justify-content: center;
+  display: flex;
   align-items: center;
-  width: 50px;
-  height: 50px;
-  margin: 5px;
-  
-  color: #1c1c1c;
-  
-  font-weight: bold;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+
+  font: 18px/1.5 sans-serif;
 }
 
-.figure-circle {
-  border-radius: 50%;
+.chessboard {
+  width: 500px;
+  height: 500px;
+
+  background: #b58763;
+
+  border-collapse: collapse;
 }
 
-.child div:nth-child(even),
-.type div:nth-of-type(even) {
-  /*  Red Color  */
-  background: #f44336;
+/* BEGIN (write your solution here) */
+.chessboard tr:nth-of-type(odd) td:nth-child(odd) {
+  background: #f1d9b5;
 }
 
-.child div:nth-child(odd),
-.type div:nth-of-type(odd) {
-  /*  Green Color  */
-  background: #4caf50;
+.chessboard tr:nth-of-type(even) td:nth-child(even) {
+  background: #f1d9b5;
 }
+/* END */
