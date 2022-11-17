@@ -1,9 +1,32 @@
 body {
-  font: 20px/1.5 sans-serif;
+  font: 16px/1.5 monospace;
 }
 
-a:hover + p {
-  color: #f32121;
-  font-size: 50px;
-  text-decoration: none;
+[class^="figure"] {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  
+  color: #1c1c1c;
+  
+  font-weight: bold;
+}
+
+.figure-circle {
+  border-radius: 50%;
+}
+
+.child div:nth-child(even),
+.type div:nth-of-type(even) {
+  /*  Red Color  */
+  background: #f44336;
+}
+
+.child div:nth-child(odd),
+.type div:nth-of-type(odd) {
+  /*  Green Color  */
+  background: #4caf50;
 }
