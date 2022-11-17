@@ -3,48 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Список дел на неделю</title>
+  <title>Обратная связь</title>
   <link rel="stylesheet" href="styles/app.css">
 </head>
 <body>
-  <form>
-    <h2>Регистрация на сайте</h2>
+  <form class="block-center form">
+    <!-- BEGIN (write your solution here) -->
+    <h1>Обратная связь</h1>
+    <div class="form-input mb-2">
+      <label for="name" class="sr-only">Ваше имя</label>
+      <input type="text"  id="name" placeholder="Ваше имя">
+    </div>
 
-    <fieldset>
-      <legend>Данные о пользователе</legend>
-      <label>
-        Имя
-        <input type="text" name="name" placeholder="Введите ваше имя">
-      </label>
-      <br>
-  
-      <label>
-        Фамилия
-        <input type="text" name="surname" placeholder="Введите вашу фамилию">
-      </label>
-      <br>
+    <div class="form-input mb-2">
+      <label for="email" class="sr-only">Ваш Email </label>
+      <input type="email"  id="email" placeholder="Ваш Email">
+    </div>
 
-      <label>
-        Дата рождения
-        <input type="number" name="birhday" placeholder="Введите дату рождения">
-      </label>
-      <br>
+    <div class="form-input mb-2">
+      <label for="textarea" class="sr-only">Ваше сообщение</label>
+      <textarea  id="textarea" cols="30" rows="10" placeholder="Ваше сообщение"></textarea>
+    </div>
 
+    <div class="small mb-1">
       <label>
-        Логин
-        <input type="text" name="login"
-        placeholder="Введите логин">
+        <input type="checkbox" id="checkbox" value="checkbox"> Я принимаю правила сервиса
       </label>
-      <br>
-
-      <label>
-        Пароль
-        <input type="password" name="password" placeholder="Введите пароль">
-      </label>
-    </fieldset>
-    
-  
-    <button>Зарегистрироваться</button>
+    </div>
+    <!-- END -->
+    <button class="btn btn-green">Отправить сообщение</button>
   </form>
 </body>
 </html>
