@@ -7,43 +7,29 @@ body {
 }
 
 .section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   height: 200px;
-  padding: 20px;
-
-  font-weight: bold;
-
-  font-size: 30px;
-  text-align: center;
+  padding: 10px 50px;
+  overflow-y: auto;
+  font-size: 18px;
+  box-sizing: border-box;
 
   background: #ffeb3b;
-  border: 10px dashed #000;
 }
 
 .image {
-  background-image: url("https://assets.codepen.io/1425525/tota_ill_12.jpg");
+  background-image: url("https://assets.codepen.io/1425525/Hexlet_Logo-01-svg__1_.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-position: center;
 }
 
-.clip-border {
-  background-clip: border-box;
+.bg-scroll {
+  background-attachment: scroll;
 }
 
-.clip-padding {
-  background-clip: padding-box;
+.bg-fixed {
+  background-attachment: fixed;
 }
 
-.clip-content {
-  background-clip: content-box;
-}
-
-.clip-text {
-  color: #0000;
-  font-size: 36px;
-
-  -webkit-background-clip: text;
-  background-clip: text;
+.bg-local {
+  background-attachment: local;
 }
