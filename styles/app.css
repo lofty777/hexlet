@@ -1,15 +1,26 @@
-body {
-  margin: 20px 0 0 20px;
+:root {
+  --transparent: transparent;
+  --purple: #9c27b0;
 }
 
-.target {
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(
-    circle, 
-    #4caf50 60px, 
-    #ffeb3b 60px, #ffeb3b 100px, 
-    #ffc107 100px, #ffc107 140px, 
-    #ff5722 140px
-  );
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+
+  /* BEGIN (write your solution here) */
+
+  background-image:
+    repeating-linear-gradient(45deg,
+      var(--transparent), var(--transparent) 100px,
+      var(--purple) 100px, var(--purple) 200px),
+
+    repeating-linear-gradient(-45deg,
+      var(--purple), var(--purple) 100px,
+      var(--transparent) 100px, var(--transparent) 200px);
+
+  /* END */
 }
