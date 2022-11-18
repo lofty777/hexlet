@@ -5,43 +5,25 @@ body {
   color: #fff;
 }
 
-.avatar {
-  width: 50px;
-  border-radius: 50%;
-}
-
-.contact {
-  display: flex;
+.news {
+  columns: 500px 3;
+  /* display: flex; */
   align-items: center;
   padding: 0 1rem;
   background-color: #673ab7;
-  width: 420px;
+  /* width: 420px; */
 }
 
-.contact-body {
+.news-body {
   padding: 1.5rem;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
-.contact-title {
+.news-title {
   display: flex;
 }
 
-.contact-name {
-  padding-right: 10px;
-  overflow-x: hidden;
-
-  font-weight: 700;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-.contact-time {
-  margin-left: auto;
-  font-size: 80%;
-}
-
-.contact-message {
+.news-desc {
   margin: 0;
   overflow-x: hidden;
 
