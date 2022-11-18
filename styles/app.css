@@ -19,7 +19,7 @@ body {
   text-align: center;
 
   background: #ffeb3b;
-  border: 10px dotted #000;
+  border: 10px dashed #000;
 }
 
 .image {
@@ -28,14 +28,22 @@ body {
   background-size: cover;
 }
 
-.bg-border {
-  background-origin: border-box;
+.clip-border {
+  background-clip: border-box;
 }
 
-.bg-padding {
-  background-origin: padding-box;
+.clip-padding {
+  background-clip: padding-box;
 }
 
-.bg-content {
-  background-origin: content-box;
+.clip-content {
+  background-clip: content-box;
+}
+
+.clip-text {
+  color: #0000;
+  font-size: 36px;
+
+  -webkit-background-clip: text;
+  background-clip: text;
 }
