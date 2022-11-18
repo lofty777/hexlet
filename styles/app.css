@@ -1,37 +1,41 @@
 body {
   display: grid;
-  grid-template-columns: 1fr 1fr;
   grid-gap: 30px;
-  
+  grid-template-columns: 1fr 1fr;
+
   font: 14px/1.5 monospace;
 }
 
 .section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 200px;
-  
+  padding: 20px;
+
+  font-weight: bold;
+
+  font-size: 30px;
+  text-align: center;
+
   background: #ffeb3b;
+  border: 10px dotted #000;
 }
 
 .image {
-  background-image: url(https://assets.codepen.io/1425525/Hexlet_Logo-01-svg__1_.png);
-}
-
-.repeat-x {
-  background-repeat: repeat-x;
-}
-
-.repeat-y {
-  background-repeat: repeat-y;
-}
-
-.no-repeat {
+  background-image: url("https://assets.codepen.io/1425525/tota_ill_12.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.repeat-space {
-  background-repeat: space;
+.bg-border {
+  background-origin: border-box;
 }
 
-.repeat-round {
-  background-repeat: round;
+.bg-padding {
+  background-origin: padding-box;
+}
+
+.bg-content {
+  background-origin: content-box;
 }
