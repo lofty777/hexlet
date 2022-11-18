@@ -1,26 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni&display=swap');
-
-body {
-  width: 100vw;
-  height: 100vh;
-  margin: 20px 0 0 20px;
-  padding: 0;
-
-  font: 18px/1.5 "Libre Bodoni", serif;
+:root {
+  --yellow: #ffeb3b;
+  --orange: #ff9800;
+  --dark: #546e7a;
 }
 
-.card {
-  width: 330px;
-  height: 430px;
-  padding: 30px;
-  box-sizing: border-box;
-  border-radius: 10px;
+.gradient {
+  width: 200px;
+  height: 200px;
   
-  color: #fff;
-  background: linear-gradient(
-    45deg,
-    #4158d0 0%, #4158d0 40%,
-    #c850c0 40%, #c850c0 90%,
-    #ffcc70 90%, #ffcc70 100%
+  background: repeating-linear-gradient(45deg,
+    var(--orange), var(--orange) 20px,
+    var(--dark) 20px, var(--dark) 25px,
+    var(--yellow) 25px, var(--yellow) 50px
   );
 }
+
