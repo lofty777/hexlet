@@ -1,35 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni&display=swap');
+
 body {
-  display: grid;
-  grid-gap: 30px;
-  grid-template-columns: 1fr 1fr;
+  width: 100vw;
+  height: 100vh;
+  margin: 20px 0 0 20px;
+  padding: 0;
 
-  font: 14px/1.5 monospace;
+  font: 18px/1.5 "Libre Bodoni", serif;
 }
 
-.section {
-  height: 200px;
-  padding: 10px 50px;
-  overflow-y: auto;
-  font-size: 18px;
+.card {
+  width: 330px;
+  height: 430px;
+  padding: 30px;
   box-sizing: border-box;
-
-  background: #ffeb3b;
-}
-
-.image {
-  background-image: url("https://assets.codepen.io/1425525/Hexlet_Logo-01-svg__1_.png");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.bg-scroll {
-  background-attachment: scroll;
-}
-
-.bg-fixed {
-  background-attachment: fixed;
-}
-
-.bg-local {
-  background-attachment: local;
+  border-radius: 10px;
+  
+  color: #fff;
+  background: linear-gradient(
+    45deg,
+    #4158d0 0%, #4158d0 40%,
+    #c850c0 40%, #c850c0 90%,
+    #ffcc70 90%, #ffcc70 100%
+  );
 }
