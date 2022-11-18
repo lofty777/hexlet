@@ -1,57 +1,37 @@
 body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100vw;
-  height: 100vh;
-  margin: 0;
-
-  color: #1e293b;
-  font: 18px/1.5 sans-serif;
-
-  background: #f8fafc;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+  
+  font: 14px/1.5 monospace;
 }
 
-small {
-  color: #626976;
+.section {
+  height: 200px;
+  
+  background: #ffeb3b;
 }
 
-.notifications {
-  width: 500px;
-  height: 500px;
-  padding: 1rem;
-
-  /* BEGIN (write your solution here) */
-  overflow: auto;
-  /* END */
-
-  background: #fff;
-  border: 1px solid rgb(98 105 118 / 16%);
-  box-shadow: rgb(30 41 59 / 4%) 0 2px 4px 0;
+.image {
+  background-image: url(https://assets.codepen.io/1425525/Hexlet_Logo-01-svg__1_.png);
 }
 
-.notifications-item {
-  padding: 1rem 0;
-
-  border-bottom: 1px solid rgb(98 105 118 / 16%);
+.repeat-x {
+  background-repeat: repeat-x;
 }
 
-.notifications-item:last-child {
-  padding-bottom: 0;
-
-  border: none;
+.repeat-y {
+  background-repeat: repeat-y;
 }
 
-.notifications-item h3 {
-  margin: 0;
-
-  /* BEGIN (write your solution here) */
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  /* END */
+.no-repeat {
+  background-repeat: no-repeat;
 }
 
-.notifications-item p {
-  margin: 0;
+.repeat-space {
+  background-repeat: space;
+}
+
+.repeat-round {
+  background-repeat: round;
 }
