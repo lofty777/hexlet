@@ -1,39 +1,54 @@
-:root {
-  --red: #f44336;
-  --green: #4caf50;
-  --blue: #2196f3;
-  --side: 200px;
+.books-card {
+  /* BEGIN (write your solution here) */
+position: relative;
+  
+  /* END */
+  box-sizing: border-box;
+  width: 500px;
+  height: 300px;
+  padding: 50px;
+
+  background: #2980b9;
+  background: linear-gradient(to right, #fff, #6dd5fa, #2980b9);
+
+  cursor: pointer;
 }
 
-body {
-  width: 600px;
-  height: 400px;
-  margin: 0;
+.book-name {
+  width: 50%;
+
+  color: #00bcd4;
+  font-weight: bold;
+  font-size: 50px;
 }
 
-/* BEGIN (write your solution here) */
-.square-red {
-  position: absolute;
-  width: var(--side);
-  height: var(--side);
-  background-color: var(--red);
+.book-author {
+  color: #03a9f4;
+  font-weight: bold;
+  font-size: 12px;
 }
 
-.square-green {
-  position: absolute;
-  width: var(--side);
-  height: var(--side);
-  background-color: var(--green);
-  top: var(--side);
-  left: var(--side);
+.book-description {
+  /* BEGIN (write your solution here) */
+position:absolute;
+top: 0;
+bottom: 0;
+right: 0;
+  
+  /* END */
+  box-sizing: border-box;
+  width: 50%;
+  padding: 20px 30px;
+
+  color: #fff;
+
+  background: #03a9f4;
+
+  opacity: 0;
+
+  transition: 1s;
 }
 
-.square-blue {
-  position: absolute;
-  width: var(--side);
-  height: var(--side);
-  background-color: var(--blue);
-  left: calc(var(--side) * 2);
+.books-card:hover > .book-description {
+  opacity: 1;
 }
-
-/* END */
