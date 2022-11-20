@@ -1,113 +1,82 @@
-/* BEGIN (write your solution here) */
 @font-face {
-  font-family: Raleway;
-  font-weight: normal;
-  src: url("../assets/fonts/Raleway-Regular.ttf");
+  font-family: "Libre Bodoni";
+  src: url("../assets/fonts/LibreBodoni-Regular.ttf");
 }
 
-@font-face {
-  font-family: Raleway;
-  font-weight: bold;
-  src: url("../assets/fonts/Raleway-Bold.ttf");
+* {
+  box-sizing: border-box;
 }
-/* END */
 
 body {
-  box-sizing: border-box;
-  width: 100vw;
-  height: 100vh;
   margin: 0;
-  padding: 50px;
+  padding: 0;
 
-  color: #eee;
+  color: #303846;
+  font: 18px/1.5 "Libre Bodoni", serif;
 
-  /* BEGIN (write your solution here) */
-  font: 20px/1.5 Raleway, sans-serif;
-  /* END */
-
-  background-image: linear-gradient(to right top, #222831, #282d36, #2d333b, #333841, #393e46);
-}
-
-img {
-  max-width: 100%;
-
-  vertical-align: middle;
-}
-
-a {
-  color: inherit;
-}
-
-h1 {
-  font-size: 2em;
+  background: #f0f3f4;
 }
 
 h2 {
-  color: #00adb5;
-  font-size: 1.5em;
+  padding-right: 15px;
+  padding-left: 15px;
+
+  font-weight: bold;
+  font-size: 2em;
 }
 
-.tabs {
-  width: 1024px;
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.container {
+  width: 1230px;
   margin: 0 auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
 
+.column-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column-4 {
+  width: 23%;
+  margin-bottom: 2%;
+}
+
+.card {
   /* BEGIN (write your solution here) */
-  column-count: 3;
-  column-gap: 0;
+  position: relative;
+  top:0;
+  right: 0;
   /* END */
+
+  padding: 30px;
+
+  border: 1px solid #ccc;
+  border-radius: 10px;
+
+  transition: 0.7s;
 }
 
-/* BEGIN (write your solution here) */
+.card:hover {
+  /* BEGIN (write your solution here) */
+  position: relative;
+  top: -15px;
+  right: 10px;
 
-.tabs-content {
-  column-span: all;
+  /* END */
 
-  background-color: #393e46;
+  color: #fff;
+
+  background: linear-gradient(45deg, #4158d0, #c850c0 40%, #ffcc70 90%);
+  cursor: pointer;
 }
 
-.tabs-content-item {
-  padding: 20px;
+.card h3 {
+  margin-top: 0;
 
-  column-count:3;
-  column-gap: 30px;
-}
-
-.tab-name {
-  display: block;
-  padding: 20px;
-
-  break-inside: avoid;
-
-
-  text-align: center;
-  text-decoration: none;
-
-  background-color: #00adb5;
-}
-
-.tab-name:hover, 
-.tab-name:focus {
-  outline: none;
-  border-bottom: 3px solid #5ffbf1;
-}
-
-.tabs-content-item {
-  display: none;
-}
-
-[data-tab="html"]:hover ~ .tabs-content [data-tab-content="html"],
-[data-tab="css"]:hover ~ .tabs-content [data-tab-content="css"],
-[data-tab="js"]:hover ~ .tabs-content [data-tab-content="js"],
-[data-tab="html"]:focus ~ .tabs-content [data-tab-content="html"],
-[data-tab="css"]:focus ~ .tabs-content [data-tab-content="css"],
-[data-tab="js"]:focus ~ .tabs-content [data-tab-content="js"]
-{
-  display: block;
-}
-
-
-/* END */
-
-.span-all {
-  column-span: all;
+  font-size: 1.5em;
 }
