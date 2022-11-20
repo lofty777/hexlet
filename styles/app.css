@@ -1,82 +1,39 @@
-@font-face {
-  font-family: "Libre Bodoni";
-  src: url("../assets/fonts/LibreBodoni-Regular.ttf");
-}
-
-* {
-  box-sizing: border-box;
+:root {
+  --red: #f44336;
+  --green: #4caf50;
+  --blue: #2196f3;
+  --side: 200px;
 }
 
 body {
+  width: 600px;
+  height: 400px;
   margin: 0;
-  padding: 0;
-
-  color: #303846;
-  font: 18px/1.5 "Libre Bodoni", serif;
-
-  background: #f0f3f4;
 }
 
-h2 {
-  padding-right: 15px;
-  padding-left: 15px;
-
-  font-weight: bold;
-  font-size: 2em;
+/* BEGIN (write your solution here) */
+.square-red {
+  position: absolute;
+  width: var(--side);
+  height: var(--side);
+  background-color: var(--red);
 }
 
-.justify-content-between {
-  justify-content: space-between;
+.square-green {
+  position: absolute;
+  width: var(--side);
+  height: var(--side);
+  background-color: var(--green);
+  top: var(--side);
+  left: var(--side);
 }
 
-.container {
-  width: 1230px;
-  margin: 0 auto;
-  padding-right: 15px;
-  padding-left: 15px;
+.square-blue {
+  position: absolute;
+  width: var(--side);
+  height: var(--side);
+  background-color: var(--blue);
+  left: calc(var(--side) * 2);
 }
 
-.column-container {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.column-4 {
-  width: 23%;
-  margin-bottom: 2%;
-}
-
-.card {
-  /* BEGIN (write your solution here) */
-  position: relative;
-  top:0;
-  right: 0;
-  /* END */
-
-  padding: 30px;
-
-  border: 1px solid #ccc;
-  border-radius: 10px;
-
-  transition: 0.7s;
-}
-
-.card:hover {
-  /* BEGIN (write your solution here) */
-  position: relative;
-  top: -15px;
-  right: 10px;
-
-  /* END */
-
-  color: #fff;
-
-  background: linear-gradient(45deg, #4158d0, #c850c0 40%, #ffcc70 90%);
-  cursor: pointer;
-}
-
-.card h3 {
-  margin-top: 0;
-
-  font-size: 1.5em;
-}
+/* END */
