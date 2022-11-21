@@ -19,8 +19,10 @@ p {
 /* BEGIN (write your solution here) */
 .timeline {
   padding: 30px 0 30px 50px;
+  margin: 0;
 
 }
+
 .timeline::before {
   position: absolute;
   left: 48px;
@@ -29,6 +31,14 @@ p {
   background-color: #fff;
 
   content: '';
+}
+
+.timeline li {
+  margin-bottom: 100px;
+}
+
+.timeline li:last-child{
+  margin-bottom: 0;
 }
 
 /* END */
