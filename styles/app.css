@@ -1,31 +1,45 @@
-/* BEGIN (write your solution here) */
-
-main > * {
-  min-height: 50vh;
+/** CSS STYLE **/
+body {
+  margin: 0;
 }
 
-.left-aside {
-  width: 200px;
-  
-  background-color: #d32f2f;
+.bg-gray {
+  background: #bdbdbd;
 }
 
-.content-side {
-  background-color: #388e3c;
-  
-  width: 200px;
-  
-  flex-grow: 1;
+.bg-orange {
+  background: #ffcc80;
 }
 
-.right-aside {
-  width: 350px;
-
-  background-color: #1976d2;
+.bg-green {
+  background: #66bb6a;
 }
 
-/* END */
+.h-100vh {
+  height: 100vh;
+}
 
-.d-flex {
+.flex-container {
+  /* BEGIN (write your solution here) */
+
   display: flex;
+  flex-direction: column;
+
+  /* END */
+}
+
+.flex-item {
+  /* BEGIN (write your solution here) */
+
+  flex: 1 1 200px;
+
+  /* END */
+}
+
+.no-shrink {
+  /* BEGIN (write your solution here) */
+
+  flex-shrink: 0;
+
+  /* END */
 }
