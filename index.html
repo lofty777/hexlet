@@ -2,15 +2,50 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles/app.css">
-  <title>Гибкость элементов</title>
+  <title>Калькулятор</title>
 </head>
 <body>
-  <div class="flex-container h-100vh">
-    <div class="flex-item bg-gray no-shrink"></div>
-    <div class="flex-item bg-orange"></div>
-    <div class="flex-item bg-green"></div>
+  <div class="calculation">
+    <!-- BEGIN (write your solution here) -->
+    <div class="result">
+      <p class="small text-gray">30 x 21</p>
+      <p class="text-big ">630</p>
+    </div>
+
+    <div class="calc-item">
+      <button class="btn">C</button>
+      <button class="btn">&plusmn;</button>
+      <button class="btn">%</button>
+      <button class="btn bg-blue">&divide;</button>
+    </div>
+    <div class="calc-item">
+      <button class="btn">1</button>
+      <button class="btn">2</button>
+      <button class="btn">3</button>
+      <button class="btn bg-blue">&times;</button>
+    </div>
+    <div class="calc-item">
+      <button class="btn">4</button>
+      <button class="btn">5</button>
+      <button class="btn">6</button>
+      <button class="btn bg-blue">-</button>
+      </div>
+    <div class="calc-item">
+      <button class="btn">7</button>
+      <button class="btn">8</button>
+      <button class="btn">9</button>
+      <button class="btn bg-blue">+</button>
+      </div>
+    <div class="calc-item">
+      <button class="btn">0</button>
+      <button class="btn">.</button>
+      <button class="btn small">Delete</button>
+      <button class="btn bg-blue">=</button>
+      </div>
+    <!-- END -->
   </div>
 </body>
 </html>
