@@ -1,8 +1,7 @@
 "use strict";
 
-let firstName = '  Grigor   \n';
+const text = 'When \t\n you play a \t\n game of thrones you win or you die.';
 
 // BEGIN (write your solution here)
-firstName = firstName.trim();
-console.log(firstName);
+console.log(text.slice(4, 15).trim().length);
 // END
