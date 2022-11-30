@@ -1,7 +1,10 @@
 "use strict";
 
-const text = 'When \t\n you play a \t\n game of thrones you win or you die.';
 
-// BEGIN (write your solution here)
-console.log(text.slice(4, 15).trim().length);
-// END
+const sayHurrayThreeTimes = () => {
+    const word = 'hurray!'
+    return `${word} ${word} ${word} `;
+  };
+
+const hurray = sayHurrayThreeTimes();
+console.log(hurray);
