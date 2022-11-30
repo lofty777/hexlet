@@ -1,9 +1,9 @@
 "use strict";
 
-const getHiddedCard = (cardsNumbers, starsCount = 4) => {
-    let star = '*';
-    const result = `${star.repeat(starsCount)}${cardsNumbers.slice(-4)}`;
-    console.log(result);
-};
+ let incr = 10,
+     decr = 10;
 
-getHiddedCard('234240807', 9);
+ incr++;
+ decr--;
+
+ console.log(incr, decr);
