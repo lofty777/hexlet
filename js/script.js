@@ -1,10 +1,9 @@
 "use strict";
 
+const getHiddedCard = (cardsNumbers, starsCount = 4) => {
+    let star = '*';
+    const result = `${star.repeat(starsCount)}${cardsNumbers.slice(-4)}`;
+    console.log(result);
+};
 
-const sayHurrayThreeTimes = () => {
-    const word = 'hurray!'
-    return `${word} ${word} ${word} `;
-  };
-
-const hurray = sayHurrayThreeTimes();
-console.log(hurray);
+getHiddedCard('234240807', 9);
