@@ -1,9 +1,14 @@
 "use strict";
 
+const normalizeUrl = (site) => {
+    let normalizedUrl;
+    if (site.startsWith('https://')) {
+      normalizedUrl = site;
+    } else {
+      normalizedUrl = `https://${site}`;
+    }
+  
+    return normalizedUrl;
+  };
 
- 
-
-const getLetter = (str, numberOfLetter) => str[numberOfLetter - 1] || '';
-
-console.log(getLetter(';kasjdf;;', 0));
-
+console.log(normalizeUrl('http://;adjf;j'));
