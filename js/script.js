@@ -1,9 +1,6 @@
 "use strict";
 
- let incr = 10,
-     decr = 10;
+const isLeapYear = (year) => year % 400 === 0 || (year % 4 === 0 && year % 100 !== 0);
 
- incr++;
- decr--;
-
- console.log(incr, decr);
+console.log(isLeapYear(2999));
+ 
