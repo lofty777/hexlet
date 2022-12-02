@@ -1,25 +1,17 @@
 "use strict";
 
-const printNumbers = (initialNumber) => {
-    // BEGIN (write your solution here)
-    let i = initialNumber;
-    while (i > 0) {
-        console.log(i);
-      i--;
-    }
-    console.log('finished!');
-};
-
-printNumbers(5);
-
-const multiplyNumbersFromRange = (start, finish) => {
-    let i = start;
-    let multiply = 1;
-    while (i <= finish) {
-      multiply *= i;
+const countChars = (str, char) => {
+    let i = 0;
+    let count = 0;
+    while (i < str.length) {
+      if (str[i].toLowerCase() === char.toLowerCase()) {
+        count += 1;
+      }
+  
       i += 1;
     }
-    return multiply;
-  };
   
-  console.log(multiplyNumbersFromRange(3, 9)); // 60
+    return count;
+  };
+
+console.log(countChars('Polina Mmmm', 'M'));
