@@ -1,17 +1,19 @@
 "use strict";
 
-const countChars = (str, char) => {
+const makeItFunny = (str, n) => {
     let i = 0;
-    let count = 0;
+    let result = '';
     while (i < str.length) {
-      if (str[i].toLowerCase() === char.toLowerCase()) {
-        count += 1;
+      if ((i + 1) % n === 0) {
+        result = `${result}${str[i].toUpperCase()}`;
+      } else {
+        result = `${result}${str[i]}`;
       }
   
       i += 1;
     }
   
-    return count;
+    return result;
   };
 
-console.log(countChars('Polina Mmmm', 'M'));
+console.log(makeItFunny('Polinf malinffdafda', 3));
