@@ -1,19 +1,17 @@
 "use strict";
 
-const makeItFunny = (str, n) => {
-    let i = 0;
+const encrypt = (message) => {
     let result = '';
-    while (i < str.length) {
-      if ((i + 1) % n === 0) {
-        result = `${result}${str[i].toUpperCase()}`;
-      } else {
-        result = `${result}${str[i]}`;
-      }
-  
-      i += 1;
+    
+    for (let i = 0; i < message.length; i+= 2) {
+        const nextSymbol = message[i+1] || '';
+       
+        result = `${result}${nextSymbol}${message[i]}`;
     }
-  
+    
     return result;
   };
 
-console.log(makeItFunny('Polinf malinffdafda', 3));
+
+
+
