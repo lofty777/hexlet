@@ -8,3 +8,5 @@ const square = (x) => {
 const surfaceArea = (r) => {
   return 4 * pi * square(r);
 };
+
+export default surfaceArea;
