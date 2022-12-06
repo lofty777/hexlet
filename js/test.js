@@ -1,15 +1,10 @@
-const roadMines = [false, true, false, false, true, false, false, true, false, true, false, true, false];
-
-for (let j = 0; j < roadMines.length; j++) {
-    if (roadMines[j] === true) {
-    console.log('танк повреждён');
-}
-}
-
-for (let i in roadMines) {
-    if(roadMines[i] === false) {
-        console.log(`танк переместился на ${(+i) + 1}`);
-    } else {
-        console.log('танк убит');
+export const reverseInt = (int) => {
+    let result = '';
+    for (let i = 0; i < int.length; i += 1) {
+        result = +`${int[i]}${result}`;
     }
-}
+    console.log(result);
+  };
+
+reverseInt('123400');
+ 
