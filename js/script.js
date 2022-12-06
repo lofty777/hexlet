@@ -9,30 +9,20 @@ delete animals[3];
 
 console.log(animals[0]);
 
-const addPrefix = (array, prefix) => {
-    const array2 = array.slice();
-    for (let i = 0; i < array2.length; i += 1) {
-        array2[i] = `${prefix} ${array[i]}`;
+const addPrefix = (array) => {
+    for (let i = 0; i < array.length/2; i++) {
+        let a = array[i];
+        array[i]=array[array.length-1-i];
+        array[array.length-1-i] = a;
+        
     }
-    return array2;
+    return array;
 };
 
-//Second solution
-
-// const addPrefix = (array, prefix) => {
-//     const array2 = [];
-//     for (let i = 0; i < array.length; i += 1) {
-//       array2[i] = `${prefix} ${array[i]}`;
-//     }
-//     return array2;
-//   };
-  
-//   export default addPrefix;
-
-const names = ['john', 'alex', 'polina', 'teo'];
-const newNames1 = addPrefix(names, 'Mr');
+const names = ['john', 'alex', 'max','polina', 'teo'];
+const newNames1 = addPrefix(names);
 
 console.log(newNames1);
-console.log(names);
+console.log(newNames1);
 
 
