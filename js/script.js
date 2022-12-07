@@ -1,31 +1,32 @@
 "use strict";
 
-const getTotalAmount = (coll, kindOfMoney) => {
-    let sum = 0;
-    
-    for (const item of coll) {
-        const exchange = item.slice(0, 3);
-        if (exchange !== kindOfMoney) {
-            continue;
-        }
-        const countMoney = +item.slice(4);
-        sum += countMoney;
+const getSuperSeriesWinner = (scores) => {
+    let result = 0;
+    for (const item of scores) {
+        result += Math.sign(item[0] - item[1]);
     }
-    
-    console.log(sum);
+    console.log(result);
+
+    if (result > 0) {
+        console.log('canada');
+    }
+    if (result < 0) {
+        console.log('ussr');
+    } else {
+        console.log(null);
+    }
 };
-
-const money1 = [
-    'eur 10', 'usd 1', 'usd 10', 'rub 50', 'usd 5',
+// Первое число – сколько забила Канада
+// Второе число – сколько забила СССР
+const scores = [
+    [3, 7], // 0:1
+    [4, 1], // 1:1
+    [4, 4], // 1:1
+    [3, 5], // 1:2
+    [4, 5], // 1:3
+    [3, 2], // 2:3
+    [4, 3], // 3:3
+    [5, 5], // 4:3
 ];
-getTotalAmount(money1, 'usd') // 16
 
-const money2 = [
-    'eur 10', 'usd 1', 'eur 5', 'rub 100', 'eur 20', 'eur 100', 'rub 200',
-];
-getTotalAmount(money2, 'eur') // 135
-
-const money3 = [
-    'eur 10', 'rub 50', 'eur 5', 'rub 10', 'rub 10', 'eur 100', 'rub 200',
-];
-getTotalAmount(money3, 'rub') // 270
+getSuperSeriesWinner(scores); // 'canada'
