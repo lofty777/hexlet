@@ -1,32 +1,28 @@
 "use strict";
 
-const getSuperSeriesWinner = (scores) => {
-    let result = 0;
-    for (const item of scores) {
-        result += Math.sign(item[0] - item[1]);
+const buildDefinitionList = (coll) => {
+    if (coll.length === 0) {
+        console.log('');
     }
-    console.log(result);
 
-    if (result > 0) {
-        console.log('canada');
+    const definitionList = [];
+    
+    for (const item of coll) {
+        const name = item[0];
+        const description = item[1];
+        definitionList.push(`<dt>${name}</dt><dd>${description}</dd>`);
     }
-    if (result < 0) {
-        console.log('ussr');
-    } else {
-        console.log(null);
-    }
+    // console.log(definitionList);
+    const innerValue = definitionList.join('');
+    const result = `<dl>${innerValue}</dl>`;
+    
+    console.log(result);
 };
-// Первое число – сколько забила Канада
-// Второе число – сколько забила СССР
-const scores = [
-    [3, 7], // 0:1
-    [4, 1], // 1:1
-    [4, 4], // 1:1
-    [3, 5], // 1:2
-    [4, 5], // 1:3
-    [3, 2], // 2:3
-    [4, 3], // 3:3
-    [5, 5], // 4:3
+
+const definitions = [
+    ['Блямба', 'Выпуклость, утолщения на поверхности чего-либо'],
+    ['Бобр', 'Животное из отряда грызунов'],
 ];
 
-getSuperSeriesWinner(scores); // 'canada'
+buildDefinitionList(definitions);
+  // '<dl><dt>Блямба</dt><dd>Выпуклость, утолщение на поверхности чего-либо</dd><dt>Бобр</dt><dd>Животное из отряда грызунов</dd></dl>';
