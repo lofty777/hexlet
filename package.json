@@ -17,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/lofty777/hexlet/issues"
   },
-  "homepage": "https://github.com/lofty777/hexlet#readme"
+  "homepage": "https://github.com/lofty777/hexlet#readme",
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "lodash.uniq": "^4.5.0"
+  }
 }
