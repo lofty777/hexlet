@@ -1,22 +1,33 @@
 "use strict";
 import _ from 'lodash';
 
-const text1 = "yyab";
+// const getIntesectionOfSortedArrays = (arr1, arr2) => {
+//     const result = _.intersection (arr1, arr2);
+//     return result;
+// };
 
-const countUniqChars = (text) => {
-    const coll = [];
-    for (const item of text) {
-        // coll.push(item);
-        if (!coll.includes(item)) {
-            coll.push(item);
-        }
+// const getIntesectionOfSortedArrays = (arr1, arr2) => {
+//     let result = [];
+//     for (const number of arr1) {
+//         if (arr2.includes(number)) {
+//             result.push(number);
+//         }
+//     }
+//     result = Array.from (new Set (result));
+//     return result;
+// };
+const getIntesectionOfSortedArrays = (arr1, arr2) => {
+    let result = [];
+    for (let i = 0; i < arr1.length - 1; i += 1) {
+      if (arr2.includes(arr1[i])) {
+        result.push(arr1[i]);
+      }
     }
-    // const result = _.uniq(coll);
-    return coll.length;
-};
-
-export default countUniqChars;
-
-console.log(countUniqChars(text1));
+    result = Array.from(new Set(result));
+    return result;
+  };
+  
+  export default getIntesectionOfSortedArrays;
 
 
+console.log(getIntesectionOfSortedArrays([1, 1, 1, 2, 2, 2], [1, 1, 2, 2, 3, 3]));

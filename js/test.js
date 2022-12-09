@@ -1,30 +1,55 @@
 import _ from 'lodash';
-// var numbers = [1, 2, 2, 4];
-// var result = _.uniq(numbers);
-// console.log(result);
 
-const text1 = "yyab";
-// const arr1 = [];
-// for (let i = 0; i < text1.length; i++) {
-//     arr1.push(text1[i]);
-// }
-// console.log(arr1);
-// const result = _.uniq(arr1);
-// console.log(result);
-// console.log(result.length);
+const openingSymbols = ['(', '[', '{', '<'];
+const closingSymbols = [')', ']', '}', '>'];
 
-const countUniqChars = (text) => {
-    const coll = [];
-    for (const item of text) {
-        // coll.push(item);
-        if (!coll.includes(item)) {
-            coll.push(item);
-        }
+const isOpeningSymbol = (symbol) => openingSymbols.includes(symbol);
+const getClosingSymbolFor = (symbol) => {
+  for (let i = 0; i < closingSymbols.length; i += 1) {
+    if (openingSymbols[i] === symbol) {
+      return closingSymbols[i];
     }
-    // const result = _.uniq(coll);
-    return coll.length;
+  }
+  return null;
 };
 
-export default countUniqChars;
+const checkIsBalanced = (str) => {
+  const stack = [];
+  for (const symbol of str) {
+    if (isOpeningSymbol(symbol)) {
+      const closingSymbol = getClosingSymbolFor(symbol);
+      stack.push(closingSymbol);
+    } else {
+      const lastSavedSymbol = stack.pop();
+      if (symbol !== lastSavedSymbol) {
+        return false;
+      }
+    }
+  }
 
-console.log(countUniqChars(text1));
+  return stack.length === 0;
+};
+
+console.log(checkIsBalanced('({}}[]'));
+
+// const spinWords = (text) => {
+//     let arr = [];
+//     const separator = ' ';
+//     arr = text.split(separator);
+//     console.log(arr);
+//     for (let j = 0; j < arr.length; j++) {
+//         const item = arr[j];
+//         if (item.length > 4) {
+//             let result = '';
+//             for (let r = 0; r < item.length; r++) {
+//                 result = `${item[r]}${result}`;
+//             }
+//             arr[j] = result;
+//         }
+//     }
+//     console.log(arr);
+//     const spinText = arr.join(separator);
+//     console.log(spinText);
+// };
+
+// spinWords('Hi my welcome dear Polina');
