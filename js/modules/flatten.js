@@ -1,6 +1,3 @@
-"use strict";
-import _ from 'lodash';
-
 export const flatten = (coll) => {
     if (coll.length === 0) {
         return [];
@@ -19,3 +16,16 @@ export const flatten = (coll) => {
 };
 
 console.log(flatten([]));
+
+export const flatten2 = (coll) => {
+    let result = [];
+    for (const item of coll) {
+      if (Array.isArray(item)) {
+        result = [...result, ...item];
+      } else {
+        result = [...result, item];
+      }
+    }
+  
+    return result;
+  };
