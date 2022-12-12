@@ -2,14 +2,16 @@
 import _ from 'lodash';
 
 
-// const chunk = (coll, chunkLength) => {
-//     const res = [];
-//     for (let i = 0; i < coll.length; i += chunkLength) {
-//         const chunk = coll.slice(i, i + chunkLength);
-//         res.push(chunk);
-//     }
-//     return res;
-// };
+const chunk = (coll, chunkLength) => {
+    const res = [];
+    for (let i = 0; i < coll.length; i += chunkLength) {
+        const chunk = coll.slice(i, i + chunkLength);
+        res.push(chunk);
+    }
+    return res;
+};
+
+export default chunk;
 
 const spliceIntoChunks = (arr, chunkSize) => {
     const res1 = [];
@@ -18,7 +20,7 @@ const spliceIntoChunks = (arr, chunkSize) => {
         res1.push(chunk1);
     }
     return res1;
-}
+};
     
 
 
